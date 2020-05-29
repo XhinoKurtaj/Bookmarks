@@ -6,6 +6,7 @@ from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditFor
 from .models import Profile
 from django.contrib import messages
 
+
 # Create your views here.
 
 def user_login(request):
@@ -50,6 +51,7 @@ def register(request):
     else:
         user_form = UserRegistrationForm()
     return render(request, 'account/register.html', {'user_form': user_form})
+
 
 @login_required
 def edit(request):
